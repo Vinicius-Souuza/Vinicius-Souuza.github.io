@@ -1,0 +1,84 @@
+.introdução {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introdução h1 {
+  font-size: 3rem;
+  line-height: 3.375rem;
+  margin-bottom: 30px;
+  position: relative;
+  color: #131313;
+}
+
+.introdução h1::before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 100px;
+  background: url("../img/Decoração.svg") no-repeat center;
+  position: absolute;
+  margin-top: -27px;
+  margin-left: -58px;
+  z-index: -1;
+}
+
+.introdução p {
+  font-size: 1.5rem;
+  color: #484848;
+}
+
+@media (max-width: 1200px) {
+  .introdução h1 {
+    font-size: 2.5rem;
+  }
+  .introdução p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introdução {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .introdução h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .introdução p {
+    font-size: 1rem;
+  }
+  .introdução h1::before {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 10px;
+    background: url("../img/Decoração.svg") no-repeat center;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -0px;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .introdução {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .introdução img {
+    display: none;
+  }
+  .introdução h1::before {
+    width: 45px;
+    height: 10px;
+    left: 50px;
+    margin-top: -4px;
+  }
+}
